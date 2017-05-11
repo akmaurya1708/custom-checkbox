@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="description" content="Custom css for styling Checkbox and Radio buttons">
+  <meta name="keywords" content="HTML,CSS,XML,styling Checkbox, styling Radio, pure CSS">
+  <meta name="author" content="AK Maurya">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Custom css for styling Checkbox and Radio buttons</title>
+	<style type="text/css">
+    body{
+      font-family: sans-serif;
+    }
+    div.container {
+      margin: auto;
+      max-width: 600px;
+      text-align: center;
+    }
+		.checkbox-css, .radio-css {
+		  line-height: 30px;
+		  padding-left: 30px;
+		  position: relative;
+		}
+		.checkbox-css > input[type="checkbox"], .radio-css > input[type="radio"] {
+      height: 0;
+      opacity: 0;
+      position: absolute;
+      width: 0;
+    }
+    .checkbox-css > input[type="checkbox"] + span, .radio-css > input[type="radio"] + span {
+      border: 2px solid #333;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      height: 15px;
+      width: 15px;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      -o-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .radio-css > input[type="radio"] + span {
+      border-radius: 50%;
+    }
+    .radio-css > input[type="radio"]:checked + span, .checkbox-css > input[type="checkbox"]:checked + span {
+     background-color: #1038ef;
+    }
+	</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Custom css for styling Checkbox and Radio buttons</h1>
+    <hr>
+    <h2>Checkbox</h2>
+    <p>
+      <label class="checkbox-css"><input type="Checkbox" name="checkbox" checked=""><span></span> Check label</label><br>
+      <label class="checkbox-css"><input type="Checkbox" name="checkbox"><span></span> Check label</label><br>
+      <label class="checkbox-css"><input type="Checkbox" name="checkbox"><span></span> Check label</label><br>
+    </p>
+    <hr>
+    <h2>Radio Buttons</h2>
+    <p>
+      <label class="radio-css"><input type="radio" name="radio"  checked=""><span></span> radio label</label><br>
+      <label class="radio-css"><input type="radio" name="radio"><span></span> radio label</label><br>
+      <label class="radio-css"><input type="radio" name="radio"><span></span> radio label</label><br>
+    </p>
+  </div>
+</body>
+</html>
